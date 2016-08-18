@@ -1,0 +1,6 @@
+{
+  "region": "ap-northeast-1",
+  "resourcesStackName": "iotdemoapi-dev-r",
+  "iamRoleArnLambda": "arn:aws:iam::231066259854:role/iotdemoapi-dev-r-IamRoleLambda-2IOCF72JMMNR",
+  "apiGatewayApi": "iotdemoapi"
+}

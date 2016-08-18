@@ -1,0 +1,12 @@
+{
+  "name": "iotdemoapi",
+  "custom": {
+    "client": {
+        "bucketName": "sms-iot-demo-tokyo"
+    }
+  },
+  "plugins": [
+    "serverless-cors-plugin",
+    "serverless-client-s3"
+  ]
+}
