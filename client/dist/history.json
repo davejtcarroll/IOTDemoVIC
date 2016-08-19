@@ -1,0 +1,34 @@
+[
+  {
+    "location":"ARARAT",
+    "suburb":"MAROONA",
+    "Device":"Win32",
+    "Threat":"High",
+    "lat":-33.855601,
+    "lon":151.20822
+  },
+  {
+   "location":"HORSHAM POST SHOP",
+    "suburb":"NURRABIEL",
+    "Device":"Win32",
+    "Threat":"High",
+    "lat":-33.855601,
+    "lon":151.20822
+  },
+  {
+   "location":"BENTLEIGH EAST DC",
+    "suburb":"MURRUMBEENA",
+    "Device":"Win32",
+    "Threat":"High",
+    "lat":-33.855601,
+    "lon":151.20822
+  },
+  {
+    "location":"HORSHAM POST SHOP",
+    "suburb":"NURRABIEL",
+    "Device":"Win32",
+    "Threat":"High",
+    "lat":-33.855601,
+    "lon":151.20822
+  }
+]

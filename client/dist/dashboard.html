@@ -5,123 +5,15 @@
     <title>Simple Map</title>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
-    <style>
-        html,
-        body {
-            height: 100%;
-            margin: 0px;
-            padding: 0px;
-            font-family: verdana;
-        }
-        h1,
-        h3 {
-            text-align: center;
-        }
-        #map-canvas {
-            height: 78%;
-        }
-        .header {
-            height: 5%;
-            width: 100%;
-        }
-        .left {
-            left: 0;
-            top: 0;
-            right: 20%;
-            bottom: 0;
-        }
-        .footer {
-            bottom: 0;
-            position: fixed;
-            width: 80%;
-        }
-        .ab {
-            position: absolute;
-            top: 80px;
-        }
-        .topright {
-            right: 0;
-            width: 150px;
-            height: 8%;
-        }
-        .right {
-            right: 0;
-            width: 20%;
-            height: 23%;
-        }
-        .list {
-            padding: 0 5px;
-        }
-        .listItems {
-            height: 600px;
-            overflow-y: hidden;
-            padding: 0 0 0 20px;
-        }
-        .item {
-            padding: 5px 0;
-            border-bottom: 1px dotted #ccc;
-            font-size: 11px;
-        }
-        .topmost {
-            top: 0;
-        }
-        .top {
-            top: 8%;
-        }
-        .mid1 {
-            top: 31%;
-        }
-        .mid2 {
-            top: 54%;
-        }
-        .bot {
-            bottom: 0;
-        }
-        .icon {
-            margin-top: 30px;
-            height: 40px;
-        }
-        .text {
-            font-size: 60px;
-            font-family: monospace;
-            color: #1a1;
-            left: 0;
-        }
-        .mylink {
-            font-size: 22px;
-            font-family: arial narrow, arial;
-            color: #1a1;
-            position: absolute;
-            top: 10px;
-            left: 2px;
-        }
-        .red {
-            color: #ff0000;
-        }
-        .orange {
-            color: #FF8C00;
-        }
-        .green {
-            color: #006400;
-        }
-        .footerCol {
-            width: 20%;
-            float: left;
-        }
-        .devices {
-            font-weight: bold;
-            line-height: 70px;
-            display: block;
-            height: 30px;
-            margin: 20px;
-        }
-    </style>
+    <link rel="stylesheet" href="main.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCe26I3LJWj-b0uzUfoCq5Ij2jCnG-FMzw">
     </script>
     <script src="http://cdn.pubnub.com/pubnub-3.7.1.min.js"></script>
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
-
+    <script src="menu.js"></script>
     <script>
+
         // Mouseover/ Click sound effect- by JavaScript Kit (www.javascriptkit.com)
 
         var html5_audiotypes = {
@@ -420,17 +312,31 @@
 
         }
     </script>
-
-
-
-
 </head>
 
 <body>
 
 
     <div class="header">
+        <p>
+            <a id="menu" href="#"> <i class="fa fa-bars fa-3x" aria-hidden="true"></i> <a> 
+            <a id="close" href="#"><i class="fa fa-close fa-3x" aria-hidden="true"></i> <a>
+        </p>
+
         <h1> Zombie Dashboard</h1>
+    </div>
+
+    <div class = "leftMenu">
+        <p class="menuItem">
+               <a href="dashboard.html"> Dashboard </a>
+        </p>
+         <p class="menuItem">
+               <a href="history.html"> History </a>
+        </p>
+        <p class="menuItem">
+               <a href="index.html"> Client </a>
+        </p>
+
     </div>
 
     <div id="map-canvas" class="ab left"></div>

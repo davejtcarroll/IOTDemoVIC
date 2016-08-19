@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Simple Map</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="main.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css"/>
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+    <script src="menu.js"></script>
+ </head>
+<script>
+
+$(function() {
+
+    $('#history').DataTable();
+});
+
+//This runs when the page loads.
+//$.get makes an AJAX request to that URL. Node handles this with the app.get('/api/getPostcode'... code and returns a data object.
+$.getJSON("history.json", function(json) {
+    console.log(json); // this will show the info it in firebug console
+});
+</script>
+<body>
+
+  <div class="header">
+        <p>
+            <a id="menu" href="#"> <i class="fa fa-bars fa-3x" aria-hidden="true"></i> <a> 
+            <a id="close" href="#"><i class="fa fa-close fa-3x" aria-hidden="true"></i> <a>
+        </p>
+
+        <h1> Zombie Threat History</h1>
+    </div>
+
+    <div class = "leftMenu">
+        <p class="menuItem">
+               <a href="dashboard.html"> Dashboard </a>
+        </p>
+         <p class="menuItem">
+               <a href="history.html"> History </a>
+        </p>
+        <p class="menuItem">
+               <a href="index.html"> Client </a>
+        </p>
+
+   </div>
+
+   <div class="tblHistory">
+
+   <table id="history" class="display" cellspacing="0" width="100%">
+        <thead>
+            <tr>
+                <th>Location</th>
+                <th>Suburb</th>
+                <th>Device</th>
+                <th>Threat Level</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Tiger Nixon</td>
+                <td>System Architect</td>
+                <td>Edinburgh</td>
+                <td>61</td>
+             </tr>
+             <tr>
+                <td>Tiger Nixon</td>
+                <td>System Architect</td>
+                <td>Edinburgh</td>
+                <td>61</td>
+             </tr>
+             <tr>
+                <td>Tiger Nixon</td>
+                <td>System Architect</td>
+                <td>Edinburgh</td>
+                <td>61</td>
+             </tr>
+             <tr>
+                <td>Tiger Nixon</td>
+                <td>System Architect</td>
+                <td>Edinburgh</td>
+                <td>61</td>
+             </tr>
+        </tbody>
+    </table>
+
+   </div>
+
+
+
+ </body>
+
+ </html>
