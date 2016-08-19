@@ -5,6 +5,9 @@
             padding: 0px;
             font-family: verdana;
         }
+        a {
+            text-decoration: none !important;
+        }
         th {
             text-align: left;
         }
@@ -154,7 +157,7 @@
             cursor: pointer;
         }
 
-        .menuItem a,.menuItem a:hover {
+        .menuItem a,.menuItem a:hover,p.menuItem {
             color: #545454;
              text-decoration: none !important;
             font-weight: 600;
