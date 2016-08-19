@@ -15,15 +15,14 @@
 <script>
 
 $(function() {
-
+	var jsonLink = "http://sms-iot-demo-tokyo.s3-website-ap-northeast-1.amazonaws.com/history.json";
+    $.getJSON(jsonLink, function(json) {
+    console.log(json); // this will show the info it in firebug console
     $('#history').DataTable();
 });
-
-//This runs when the page loads.
-//$.get makes an AJAX request to that URL. Node handles this with the app.get('/api/getPostcode'... code and returns a data object.
-$.getJSON("history.json", function(json) {
-    console.log(json); // this will show the info it in firebug console
 });
+
+
 </script>
 <body>
 
