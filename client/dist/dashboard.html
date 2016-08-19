@@ -22,7 +22,8 @@
           $(json).each(function(obj, item) {
               resultSTR += "<div class='item " + item.colour + "'><p> Location : " + item.location + "</p><p> Suburb : " + item.suburb + "</p><p> Device :  " + item.Device + "</p><p>Threat Level : " + item.Threat + "</p></div>";
           });
-          $('.listItems').append(resultSTR);
+         // $('.listItems').append(resultSTR);
+          $(resultSTR).appendTo('.listItems').slideDown('slow');
           console.log(json);
       });
   });
