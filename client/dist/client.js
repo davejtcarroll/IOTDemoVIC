@@ -64,9 +64,10 @@ function renderMap(lat, lon) {
   var map;
       function initialize() {
         var mapOptions = {
-          zoom: 7,
+          zoom: 10,
           center: new google.maps.LatLng(lat,lon),
-          disableDefaultUI: true
+          disableDefaultUI: true,
+          zoomControl: true
         };
         map = new google.maps.Map(document.getElementById('map-canvas'),mapOptions);
       }
@@ -75,7 +76,16 @@ function renderMap(lat, lon) {
         var myMarker = new google.maps.Marker({
           position: LatLng,
           animation: google.maps.Animation.DROP,
+          icon: 'circle.png',
           map: map});
+
+        myMarker.setAnimation(google.maps.Animation.BOUNCE);
+
+    setTimeout(function() {
+        myMarker.setAnimation(null)
+    }, 3000);
+
+
 }
 
 
