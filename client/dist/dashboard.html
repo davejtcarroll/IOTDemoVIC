@@ -14,7 +14,19 @@
     <script src="menu.js"></script>
     <script>
 
-        // Mouseover/ Click sound effect- by JavaScript Kit (www.javascriptkit.com)
+
+    $(function() {
+      var jsonLink = "http://sms-iot-demo-tokyo.s3-website-ap-northeast-1.amazonaws.com/history.json";
+      $.getJSON(jsonLink, function(json) {
+          var resultSTR = "";
+          $(json).each(function(obj, item) {
+              resultSTR += "<div class='item " + item.colour + "'><p> Location : " + item.location + "</p><p> Suburb : " + item.suburb + "</p><p> Device :  " + item.Device + "</p><p>Threat Level : " + item.Threat + "</p></div>";
+          });
+          $('.listItems').append(resultSTR);
+          console.log(json);
+      });
+  });
+       
 
         var html5_audiotypes = {
             //define list of audio file extensions and their associated audio types. Add to it if your specified audio file isn't on this list:

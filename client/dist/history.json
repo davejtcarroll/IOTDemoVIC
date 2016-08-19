@@ -4,6 +4,7 @@
     "suburb":"MAROONA",
     "Device":"Win32",
     "Threat":"High",
+    "colour" : "red",
     "lat":-33.855601,
     "lon":151.20822
   },
@@ -11,7 +12,8 @@
    "location":"HORSHAM POST SHOP",
     "suburb":"NURRABIEL",
     "Device":"Win32",
-    "Threat":"High",
+    "Threat":"Medium",
+    "colour" : "orange",
     "lat":-33.855601,
     "lon":151.20822
   },
@@ -20,6 +22,7 @@
     "suburb":"MURRUMBEENA",
     "Device":"Win32",
     "Threat":"High",
+    "colour" : "red",
     "lat":-33.855601,
     "lon":151.20822
   },
@@ -28,6 +31,7 @@
     "suburb":"NURRABIEL",
     "Device":"Win32",
     "Threat":"High",
+    "colour" : "red",
     "lat":-33.855601,
     "lon":151.20822
   }
