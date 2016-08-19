@@ -4,6 +4,7 @@
             margin: 0px;
             padding: 0px;
             font-family: verdana;
+            background-color: #000;
         }
         a {
             text-decoration: none !important;
@@ -12,11 +13,12 @@
             text-align: left;
         }
         .fa {
-            color: #000;
+            color: #fff;
         }
         h1,
         h3 {
             text-align: center;
+            color: #fff;
         }
         #map-canvas {
             height: 78%;
@@ -114,7 +116,7 @@
             color: #FF8C00;
         }
         .green {
-            color: #006400;
+            color: #1a1;
         }
         .footerCol {
             width: 20%;
@@ -130,7 +132,7 @@
         .leftMenu {
             z-index: 9999;
             height: 100%;
-            background-color: #fafafa;
+            background-color: #1B2631;
             left: -500px;
             width:300px;
             top: 0;
@@ -153,12 +155,12 @@
         }
 
         .menuItem:hover{
-            background-color: #dbdbdb;
+            background-color: #839192;
             cursor: pointer;
         }
 
         .menuItem a,.menuItem a:hover,p.menuItem {
-            color: #545454;
+            color: #fff;
              text-decoration: none !important;
             font-weight: 600;
 
