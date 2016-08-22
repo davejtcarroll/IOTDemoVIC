@@ -20,7 +20,7 @@
      text-align: center;
      color: #00b5ef;
  }
- .fa-bars {
+ .fa-bars,.fa-question-circle{
     color: #00b5ef;
  }
  #map-canvas {
@@ -170,7 +170,7 @@
  }
  .tblHistory {
      width: 80%;
-     margin: 0 auto;
+     margin: 120px auto;
  }
 
 
@@ -185,3 +185,29 @@
     border-style: solid;
     border-bottom-width :0px;
  }
+
+
+ @media only screen and (max-width: 420px) {
+
+   h1 { 
+    font-size: 24px; 
+   padding-top: 6px;
+   }
+
+   .list h3 {
+    font-size:14px;
+    padding-left:2px;
+   }
+
+   hr,  .list h3, .listItems {
+    padding-left : 2px;
+   }
+
+   .text {
+    font-size: 20px;
+   }
+
+   .fa-question-circle {
+       font-size: 3.7em !important;
+    line-height: 54px !important;   }
+}
