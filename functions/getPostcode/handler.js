@@ -1,5 +1,5 @@
 'use strict';
-var shuffledPostcodes = shuffle(require('VICLATLON.json'));
+var shuffledPostcodes = shuffle(require('getPostcode/VICLATLON.json'));
 var counter = 0;
 
 module.exports.handler = function(event, context, cb) {
