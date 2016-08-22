@@ -64,7 +64,7 @@
       "Properties": {
         "AttributeDefinitions": [
           {
-            "AttributeName": "src",
+            "AttributeName": "id",
             "AttributeType": "S"
           },
           {
@@ -74,7 +74,7 @@
         ],
         "KeySchema": [
           {
-            "AttributeName": "src",
+            "AttributeName": "id",
             "KeyType": "HASH"
           },
           {

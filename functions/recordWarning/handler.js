@@ -6,8 +6,8 @@ var dynamo = new AWS.DynamoDB.DocumentClient();;
 
 var PubNub = require('pubnub');
 var pubnubmodule = new PubNub({
-      publishKey : 'pub-c-50a538d6-ec6a-44ab-ac29-1bfb5d8ade2a',
-      subscribeKey : 'sub-c-82bcd692-57b3-11e6-a5a4-0619f8945a4f'
+    publish_key: "pub-c-9339f7dd-e9a8-41d7-b3a4-037d25972fc2",
+    subscribe_key: "sub-c-34f9f230-6ef5-11e4-bcf0-02ee2ddab7fe"
 });
 
 const stage = process.env.SERVERLESS_STAGE;
@@ -20,8 +20,8 @@ module.exports.handler = function(event, context, cb) {
 
   var now = new Date();
   event.dateTimeReceived = now.toISOString();
-  event.src = "123";
-  
+  event.id = "123";
+
   var params = {
     "TableName": dataTable,
     "Item": event
@@ -31,10 +31,10 @@ module.exports.handler = function(event, context, cb) {
  
   /*
   pubnubmodule.publish({
-      channel: 'demo_tutorial',
+      channel: 'leontest1',
       message: {"author":"lambda", "message": JSON.stringify(event.payload)}
   });
-*/
+  */
 
   dynamo.put(params,function(err, data){
       if(err)
