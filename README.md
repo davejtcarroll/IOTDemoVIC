@@ -14,4 +14,7 @@ npm serverless install
 sls client deploy 
 
 #### deploy serverless endpoints
-serverless dash deploy
+sls dash deploy
+
+#### deploy resources (database)
+sls resources deploy

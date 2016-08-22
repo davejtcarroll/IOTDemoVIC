@@ -39,6 +39,16 @@
                 "logs:PutLogEvents"
               ],
               "Resource": "arn:aws:logs:${region}:*:*"
+            },
+            {
+              "Effect": "Allow",
+              "Action": [
+                "dynamodb:PutItem",
+                "dynamodb:GetItem",
+                "dynamodb:Scan",
+                "dynamodb:Query"
+              ],
+              "Resource": "arn:aws:dynamodb:${region}:*:table/${project}-zombiedata-${stage}"
             }
           ]
         },
@@ -47,6 +57,36 @@
             "Ref": "IamRoleLambda"
           }
         ]
+      }
+    },
+    "zombiedata": {
+      "Type": "AWS::DynamoDB::Table",
+      "Properties": {
+        "AttributeDefinitions": [
+          {
+            "AttributeName": "src",
+            "AttributeType": "S"
+          },
+          {
+            "AttributeName": "dateTimeReceived",
+            "AttributeType": "S"
+          }
+        ],
+        "KeySchema": [
+          {
+            "AttributeName": "src",
+            "KeyType": "HASH"
+          },
+          {
+            "AttributeName": "dateTimeReceived",
+            "KeyType": "RANGE"
+          }
+        ],
+        "ProvisionedThroughput": {
+          "ReadCapacityUnits": 1,
+          "WriteCapacityUnits": 1
+        },
+        "TableName": "${project}-zombiedata-${stage}"
       }
     }
   },

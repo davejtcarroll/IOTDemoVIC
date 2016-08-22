@@ -39,6 +39,16 @@
                 "logs:PutLogEvents"
               ],
               "Resource": "arn:aws:logs:ap-northeast-1:*:*"
+            },
+            {
+              "Effect": "Allow",
+              "Action": [
+                "dynamodb:PutItem",
+                "dynamodb:GetItem",
+                "dynamodb:Scan",
+                "dynamodb:Query"
+              ],
+              "Resource": "arn:aws:dynamodb:ap-northeast-1:*:table/iotdemoapi-zombiedata-dev"
             }
           ]
         },
@@ -47,6 +57,36 @@
             "Ref": "IamRoleLambda"
           }
         ]
+      }
+    },
+    "zombiedata": {
+      "Type": "AWS::DynamoDB::Table",
+      "Properties": {
+        "AttributeDefinitions": [
+          {
+            "AttributeName": "src",
+            "AttributeType": "S"
+          },
+          {
+            "AttributeName": "dateTimeReceived",
+            "AttributeType": "S"
+          }
+        ],
+        "KeySchema": [
+          {
+            "AttributeName": "src",
+            "KeyType": "HASH"
+          },
+          {
+            "AttributeName": "dateTimeReceived",
+            "KeyType": "RANGE"
+          }
+        ],
+        "ProvisionedThroughput": {
+          "ReadCapacityUnits": 1,
+          "WriteCapacityUnits": 1
+        },
+        "TableName": "iotdemoapi-zombiedata-dev"
       }
     }
   },
