@@ -1,172 +1,187 @@
  html,
-        body {
-            height: 100%;
-            margin: 0px;
-            padding: 0px;
-            font-family: verdana;
-            background-color: #000;
-        }
-        a {
-            text-decoration: none !important;
-        }
-        th {
-            text-align: left;
-        }
-        .fa {
-            color: #fff;
-        }
-        h1,
-        h3 {
-            text-align: center;
-            color: #fff;
-        }
-        #map-canvas {
-            height: 78%;
-        }
-        .header {
-            height: 5%;
-            width: 100%;
-        }
-        .header p {
-            float: left;
-            width: 10%;
-            margin-left: 20px;
-        }
+ body {
+     height: 100%;
+     margin: 0px;
+     padding: 0px;
+     font-family: verdana;
+     background-color: #fff;
+ }
+ a {
+     text-decoration: none !important;
+ }
+ th {
+     text-align: left;
+ }
+ .fa {
+     color: #fff;
+ }
+ h1,
+ h3 {
+     text-align: center;
+     color: #00b5ef;
+ }
+ .fa-bars {
+    color: #00b5ef;
+ }
+ #map-canvas {
+     height: 78%;
+     margin-left: 20px;
+ }
+ .header {
+     height: 5%;
+     width: 100%;
+ }
+ .header p {
+     float: left;
+     width: 10%;
+     margin-left: 20px;
+ }
+ .header h1 {
+     float: left;
+     width: 80%;
+ }
+ .left {
+     left: 0;
+     top: 0;
+     right: 20%;
+     bottom: 0;
+ }
+ .footer {
+     top: 85%;
+     position: fixed;
+     width: 80%;
+ }
+ .ab {
+     position: absolute;
+     top: 80px;
+ }
+ .topright {
+     right: 0;
+     width: 150px;
+     height: 8%;
+ }
+ .right {
+     right: 0;
+     width: 20%;
+     height: 23%;
+ }
+ .list {
+     padding: 0 5px;
+ }
+ .listItems {
+     height: 589px;
+     overflow-y: hidden;
+     padding: 0 0 0 20px;
+ }
+ .item {
+     padding: 5px 0;
+     border-bottom: 1px solid #ccc;
+     font-size: 11px;
+ }
+ .topmost {
+     top: 0;
+ }
+ .top {
+     top: 8%;
+ }
+ .mid1 {
+     top: 31%;
+ }
+ .mid2 {
+     top: 54%;
+ }
+ .bot {
+     bottom: 0;
+ }
+ .icon {
+     margin-top: 30px;
+     height: 40px;
+ }
+ .text {
+     font-size: 60px;
+     font-family: monospace;
+     color: #00b5ef;
+     left: 0;
+ }
+ .mylink {
+     font-size: 22px;
+     font-family: arial narrow, arial;
+     color: #1a1;
+     position: absolute;
+     top: 10px;
+     left: 2px;
+ }
+ .red {
+     color: #ff0000;
+ }
+ .orange {
+     color: #FF8C00;
+ }
+ .green {
+     color: #1a1;
+ }
+ .footerCol {
+     width: 20%;
+     float: left;
+ }
+ .devices {
+     font-weight: bold;
+     line-height: 70px;
+     display: block;
+     height: 30px;
+     margin: 20px;
+ }
+ .leftMenu {
+     z-index: 9998;
+     height: 100%;
+     background-color: #1B2631;
+     left: -500px;
+     width: 300px;
+     top: 0;
+     position: absolute;
+ }
+ a#close :hover{
+    color: #00b5ef;
+ }
+ #close {
+     display: none;
+     left: 255px;
+     top: 0;
+     position: absolute;
+     z-index: 9999;
+ }
+ .menuItem {
+     height: 100px;
+     border-bottom: 1px solid #ccc;
+     padding: 30px 20px 30px 20px;
+     margin: 0;
+     box-sizing: border-box;
+ }
+ .menuItem:hover {
+     background-color: #00b5ef;
+     cursor: pointer;
+ }
+ .menuItem a,
+ .menuItem a:hover,
+ p.menuItem {
+     color: #fff;
+     text-decoration: none !important;
+     font-weight: 600;
+ }
+ .tblHistory {
+     width: 80%;
+     margin: 0 auto;
+ }
 
-        .header h1 {
-            float:left;
-            width:80%;
-        }
 
-        .left {
-            left: 0;
-            top: 0;
-            right: 20%;
-            bottom: 0;
-        }
-        .footer {
-            top: 85%;
-            position: fixed;
-            width: 80%;
-        }
-        .ab {
-            position: absolute;
-            top: 80px;
-        }
-        .topright {
-            right: 0;
-            width: 150px;
-            height: 8%;
-        }
-        .right {
-            right: 0;
-            width: 20%;
-            height: 23%;
-        }
-        .list {
-            padding: 0 5px;
-        }
-        .listItems {
-            height: 600px;
-            overflow-y: hidden;
-            padding: 0 0 0 20px;
-        }
-        .item {
-            padding: 5px 0;
-            border-bottom: 1px dotted #ccc;
-            font-size: 11px;
-        }
-        .topmost {
-            top: 0;
-        }
-        .top {
-            top: 8%;
-        }
-        .mid1 {
-            top: 31%;
-        }
-        .mid2 {
-            top: 54%;
-        }
-        .bot {
-            bottom: 0;
-        }
-        .icon {
-            margin-top: 30px;
-            height: 40px;
-        }
-        .text {
-            font-size: 60px;
-            font-family: monospace;
-            color: #1a1;
-            left: 0;
-        }
-        .mylink {
-            font-size: 22px;
-            font-family: arial narrow, arial;
-            color: #1a1;
-            position: absolute;
-            top: 10px;
-            left: 2px;
-        }
-        .red {
-            color: #ff0000;
-        }
-        .orange {
-            color: #FF8C00;
-        }
-        .green {
-            color: #1a1;
-        }
-        .footerCol {
-            width: 20%;
-            float: left;
-        }
-        .devices {
-            font-weight: bold;
-            line-height: 70px;
-            display: block;
-            height: 30px;
-            margin: 20px;
-        }
-        .leftMenu {
-            z-index: 9999;
-            height: 100%;
-            background-color: #1B2631;
-            left: -500px;
-            width:300px;
-            top: 0;
-            position: absolute;
-        }
-        #close {
-            display: none;
-            left:301px;
-            top: 0;
-            position:absolute;
+ .list h3 {
+    text-align: left;
+    padding-left: 20px;
+}
 
-        }
-        .menuItem {
-            height: 100px;
-            border-bottom: 1px dotted #ccc;
-            padding: 30px 20px 30px 20px;
-            margin:0;
-            box-sizing:border-box;
-            
-        }
-
-        .menuItem:hover{
-            background-color: #839192;
-            cursor: pointer;
-        }
-
-        .menuItem a,.menuItem a:hover,p.menuItem {
-            color: #fff;
-             text-decoration: none !important;
-            font-weight: 600;
-
-        }
-
-        .tblHistory {
-            width: 80%;
-            margin: 0 auto;
-        }
+ hr {
+    margin-left: 20px;
+    color: #ccc;
+    border-style: solid;
+    border-bottom-width :0px;
+ }
