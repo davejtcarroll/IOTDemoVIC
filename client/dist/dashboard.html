@@ -76,7 +76,7 @@
                 styles: [{
                     "featureType": "water",
                     "stylers": [{
-                        "color": "#021019"
+                        "color": "#abdcfb"
                     }]
                 }, {
                     "featureType": "landscape",
@@ -166,6 +166,11 @@
     </script>
 
     <script>
+        var appleCounter = 0;
+        var androidCounter = 0;
+        var windowsCounter = 0;
+        var otherCounter = 0;
+
         var pubnub = PUBNUB.init({
             publish_key: "pub-c-9339f7dd-e9a8-41d7-b3a4-037d25972fc2",
             subscribe_key: "sub-c-34f9f230-6ef5-11e4-bcf0-02ee2ddab7fe"
@@ -209,10 +214,7 @@
         };
 
 
-        var appleCounter = 0;
-        var androidCounter = 0;
-        var windowsCounter = 0;
-        var otherCounter = 0;
+      
 
         function incrementCount(device) {
             if (device == 'apple') {
@@ -224,11 +226,7 @@
             } else {
                 otherCounter++;
             }
-
-            $('#apple-counter').text(appleCounter);
-            $('#android-counter').text(androidCounter);
-            $('#windows-counter').text(windowsCounter);
-            $('#other-counter').text(otherCounter);
+            setCounter();
         }
 
         // subscribe to the channel, and render all messages as markers on the map
@@ -313,6 +311,13 @@
             }
         });
 
+        function setCounter() {
+
+            $('#apple-counter').text(appleCounter);
+            $('#android-counter').text(androidCounter);
+            $('#windows-counter').text(windowsCounter);
+            $('#other-counter').text(otherCounter);
+        }
 
         function appendItem(obj) {
             var threatLevel = 'High';
@@ -332,8 +337,8 @@
 
     <div class="header">
         <p>
-            <a id="menu" href="#"> <i class="fa fa-bars fa-3x" aria-hidden="true"></i> <a> 
-            <a id="close" href="#"><i class="fa fa-close fa-3x" aria-hidden="true"></i> <a>
+            <a id="menu" href="#"> <i class="fa fa-bars fa-3x" aria-hidden="true"></i> </a> 
+            <a id="close" href="#"><i class="fa fa-close fa-3x" aria-hidden="true"></i> </a>
         </p>
 
         <h1> Zombie Dashboard</h1>
@@ -377,19 +382,19 @@
             <p>
                 <p class="footerCol">
                     <img src="rsz_apple.png" width="50" height="50">
-                    <span id="apple-counter" class="text"></span>
+                    <span id="apple-counter" class="text">0</span>
                 </p>
                 <p class="footerCol">
                     <img src="android.png" width="50" height="50">
-                    <span id="android-counter" class="text"></span>
+                    <span id="android-counter" class="text">0</span>
                 </p>
                 <p class="footerCol">
                     <img src="windows.png" width="50" height="50">
-                    <span id="windows-counter" class="text"></span>
+                    <span id="windows-counter" class="text">0</span>
                 </p>
                 <p class="footerCol">
                     <img src="question.png" width="50" height="50">
-                    <span id="other-counter" class="text"></span>
+                    <span id="other-counter" class="text">0</span>
                 </p>
 
     </div>
