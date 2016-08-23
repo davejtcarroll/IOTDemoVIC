@@ -20,7 +20,7 @@
       $.getJSON(jsonLink, function(json) {
           var resultSTR = "";
           $(json).each(function(obj, item) {
-              resultSTR += "<div class='item " + item.colour + "'><p> Location : " + item.location + "</p><p> Suburb : " + item.suburb + "</p><p> Device :  " + item.Device + "</p><p>Threat Level : " + item.Threat + "</p></div>";
+              resultSTR += "<div class='item " + item.colour + "'><p> Location : " + item.location + "</p><p> Suburb : " + item.suburb + "</p><p> Device :  " + item.Device + "</p></div>";
           });
          // $('.listItems').append(resultSTR);
           $(resultSTR).appendTo('.listItems').slideDown('slow');
@@ -326,7 +326,7 @@
             } else if (obj.colour == 'orange') {
                 threatLevel = "Medium"
             }
-            $('.listItems').prepend("<div class='item " + obj.colour + "'><p> Location : " + obj.dc + "</p><p> Suburb : " + obj.suburb + "</p><p> Device :  " + obj.device + "</p><p>Threat Level : " + threatLevel + "</p></div>");
+            $('.listItems').prepend("<div class='item " + obj.colour + "'><p> Location : " + obj.dc + "</p><p> Suburb : " + obj.suburb + "</p><p> Device :  " + obj.device + "</p></div>");
 
         }
     </script>
@@ -377,9 +377,8 @@
     </div>
 
     <div class="footer">
-        <p class="footerCol">
-            <span class="devices">   </span>
-            <p>
+                 <p class="footerCol footerColMobile">
+                <p>
                 <p class="footerCol">
                     <img src="rsz_apple.png" width="50" height="50">
                     <span id="apple-counter" class="text">0</span>

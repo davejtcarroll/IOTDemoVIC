@@ -20,8 +20,9 @@
      text-align: center;
      color: #00b5ef;
  }
- .fa-bars,.fa-question-circle{
-    color: #00b5ef;
+ .fa-bars,
+ .fa-question-circle {
+     color: #00b5ef;
  }
  #map-canvas {
      height: 78%;
@@ -69,14 +70,14 @@
      padding: 0 5px;
  }
  .listItems {
-     height: 589px;
+     height: 569px;
      overflow-y: hidden;
      padding: 0 0 0 20px;
  }
  .item {
      padding: 5px 0;
      border-bottom: 1px solid #ccc;
-     font-size: 11px;
+     font-size: 13px;
  }
  .topmost {
      top: 0;
@@ -140,8 +141,8 @@
      top: 0;
      position: absolute;
  }
- a#close :hover{
-    color: #00b5ef;
+ a#close:hover {
+     color: #00b5ef;
  }
  #close {
      display: none;
@@ -172,42 +173,59 @@
      width: 80%;
      margin: 120px auto;
  }
-
-
  .list h3 {
-    text-align: left;
-    padding-left: 20px;
-}
-
- hr {
-    margin-left: 20px;
-    color: #ccc;
-    border-style: solid;
-    border-bottom-width :0px;
+     text-align: left;
+     padding-left: 20px;
  }
-
-
+ hr {
+     margin-left: 20px;
+     color: #ccc;
+     border-style: solid;
+     border-bottom-width: 0px;
+ }
  @media only screen and (max-width: 420px) {
-
-   h1 { 
-    font-size: 24px; 
-   padding-top: 6px;
-   }
-
-   .list h3 {
-    font-size:14px;
-    padding-left:2px;
-   }
-
-   hr,  .list h3, .listItems {
-    padding-left : 2px;
-   }
-
-   .text {
-    font-size: 20px;
-   }
-
-   .fa-question-circle {
-       font-size: 3.7em !important;
-    line-height: 54px !important;   }
-}
+     h1 {
+         font-size: 24px;
+         padding-top: 6px;
+     }
+     .list h3 {
+         font-size: 14px;
+         padding-left: 2px;
+     }
+     hr,
+     .list h3,
+     .listItems {
+         padding-left: 2px;
+     }
+     .text {
+         font-size: 20px;
+     }
+     .fa-question-circle {
+         font-size: 3.7em !important;
+         line-height: 54px !important;
+     }
+     .left {
+         right: 30%;
+     }
+     .right {
+         width: 30%;
+     }
+     .item {
+         font-size: 11px;
+     }
+     .listItems {
+         height: 400px;
+     }
+     .footer {
+         top: 82%;
+     }
+     #map-canvas {
+         height: 73%;
+     }
+     .footerColMobile {
+         width: 10%;
+     }
+     hr {
+         margin-left: 2px;
+     }
+ }
